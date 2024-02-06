@@ -37,7 +37,7 @@ Java 를 사용할때 우리는 정의한 클래스를 사용하기위해 별도
 
 > Code in a compilation unit automatically has access to all types declared in its package and also automatically imports all of the public types declared in the predefined package java.lang.
 
-> 컴파일 유닛코든느 해당 패키지에 선언된 모든 유형에 자동으로 액새스 하고 미리 정의된 패키지 java.lang에 선언된 모든 공용 유형을 자동으로 포함 시킵니다.
+> 컴파일 유닛코드는 해당 패키지에 선언된 모든 유형에 자동으로 액새스 하고 미리 정의된 패키지 java.lang에 선언된 모든 공용 유형을 자동으로 포함 시킵니다.
 
 즉 java는 컴파일에서 java.lang 패키지를 포함 하므로 컴파일러에게 java.lang 에 선언된 클래스들이 사용 되는데 문제가 없도록 만든것 같다.
 
