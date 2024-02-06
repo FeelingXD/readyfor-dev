@@ -33,7 +33,7 @@ Java 를 사용할때 우리는 정의한 클래스를 사용하기위해 별도
 
 > 🤔 java.lang 이 있다는건 알겠는데 임포트없이 쓸수있다! 라는 것은 보이지 않는다.
 
-이 궁금증은 oracle 자바 스펙에서 확인할 수 있는데 공식문서에는 해당 내용이 다음과 같이 작성되어 있다.
+이 궁금증은 oracle 자바 스펙에서 해결할 수 있는데 공식문서에는 해당 내용이 다음과 같이 작성되어 있다.
 
 > Code in a compilation unit automatically has access to all types declared in its package and also automatically imports all of the public types declared in the predefined package java.lang.
 
