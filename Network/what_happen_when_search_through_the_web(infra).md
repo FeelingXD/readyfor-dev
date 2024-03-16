@@ -21,7 +21,7 @@
 
 드디어 접속하려는 `www.naver.com` 에 대한 ip 주소를 알게 되었다.
 
-### 브라우저는 http 통신 
+### 브라우저가 하는 http 통신
 
 이제 `www.naver.com` 에 대한 ip 주소를 획득했고 호스트는 해당 ip 주소와 tcp연결 을 시도 한다. http(1~2) 는 tcp 기반의 통신이기에 tcp 연결을 하기위한 handshake 이후에 통신을 연결한다.
 
@@ -30,6 +30,17 @@ tcp 연결 수립 이후 다음과 같은 과정이 일어난다.
 1. 호스트는 www.naver.com 으로 get 요청을 보낸다. (HTTP REQUEST)
 2. 서버는 호스트로 부터 온 리퀘스트를 확인하고 응답을 보낸다. (HTTP RESPONSE)
 
+### 요약
+
+infra 관점에서 url 을 검색할때 어떻게 원하는 도메인 주소에 대한 ip를 얻는지 또 어떻게 더 빨리 제공할지의 관점이 필요하다.
+
+infra 에 따라 요청ip 를 빨리 얻기
+
+1. 사용자의 컴퓨터의 hosts의 파일을 참고함
+2. 공유기, ISP(internet service provider) 캐시들을 참고하여 요청주소에대한 ip가 있는지 확인함
+3. 그래도 없다면 DNS 서버 질의를 통해 요청주소에대한 ip를 얻음
+
+항상 DNS 에 요청하는건 DNS 에게도 사용자에게도 효율성 측면에서 좋지않다 그러면서 DNS, 공유기 환경에서 다양한 방법으로 Cache 해둠으로 써 속도를 높인다.
 
 ## 참조
 - [널널한개발자_웹 브라우저에 URL 입력하면 일어나는 일 - 인프라 위주](https://www.youtube.com/watch?v=GAyZ_QgYYYo&t=236s)
